@@ -9,19 +9,20 @@ Code
 - [ ] Player
     - [ ] Loop Movement
     - [ ] Aim + Shoot
-    - [ ] Health
 - [ ] Enemies
     - [ ] AI
     - [ ] SubTypes
        - [ ] Regular
        - [ ] Jockey
        - [ ] Tank
+- [ ] Tower 
+    - [ ] Health
 - [ ] Power-ups
     - [ ] UZI (faster bullet rate)
     - [ ] Shotgun (spread)
     - [ ] Rocket Launcher (AOE)
 - [ ] Score
-- [ ] Lose condition
+- [ ] Lose condition (End Game when tower is destroyed and show score)
 
 Art
 - [ ] Player
@@ -43,6 +44,10 @@ Art
     - [ ] Tank
         - [ ] Walking
         - [ ] Dead
+- [ ] Environment
+    - [ ] Tower
+    - [ ] Background
+
 - [ ] Power-ups Icons
     - [ ] UZI
     - [ ] Shotgun

@@ -35,9 +35,9 @@ Art
         - [x] running
         - [x] destroyed
 - [ ] Enemies 
-    - [ ] Regular
-        - [ ] Walking
-        - [ ] Dead
+    - [x] Regular
+        - [x] Walking
+        - [x] Dead
     - [ ] Jockey
         - [ ] Walking
         - [ ] Dead

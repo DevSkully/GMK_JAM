@@ -1,0 +1,10 @@
+res://Objects/Car.tscn
+res://Objects/Car_Script.gd
+res://Scripts/Manager/game_manager.gd
+res://Objects/arrow.tscn
+res://Objects/arrow_script.gd
+res://Objects/Bullet.tscn
+res://Objects/bullet_script.gd
+res://Scenes/test_World/world.tscn
+res://Scenes/test_World/world_script.gd
+res://Objects/Central_Tower.tscn

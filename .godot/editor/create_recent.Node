@@ -1,0 +1,9 @@
+Sprite2D
+Marker2D
+VisibleOnScreenEnabler2D
+arrow
+Area2D
+RigidBody2D
+MeshInstance2D
+CollisionShape2D
+CharacterBody2D

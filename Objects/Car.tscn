@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4nlnpos6fqwq"]
+
+[ext_resource type="Texture2D" uid="uid://du2bbfdl00l8e" path="res://icon.svg" id="1_7km7h"]
+[ext_resource type="Script" uid="uid://c2dqfvfe6l5ay" path="res://Objects/Car_Script.gd" id="1_mlop7"]
+[ext_resource type="PackedScene" uid="uid://brqlvm1v265la" path="res://Objects/arrow.tscn" id="3_tena4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5bju"]
+size = Vector2(128, 128)
+
+[node name="Car" type="CharacterBody2D"]
+script = ExtResource("1_mlop7")
+
+[node name="Car_Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_7km7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_o5bju")
+
+[node name="Arrow" parent="." instance=ExtResource("3_tena4")]

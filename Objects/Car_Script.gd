@@ -1,17 +1,27 @@
-extends Sprite2D
+class_name Car
+extends CharacterBody2D
 
-var tween := create_tween()
+signal Center_Offset(Vector2)
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.is_pressed():
-		Circle_Movement()
+@export var radius : float = 200.0
+@export var speed : float = 1.5
 
-func Circle_Movement()->void:
-	reset_tween()
-	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	tween.tween_property(self, "global_position", get_global_mouse_position(), 1)
+var tower : Vector2
+var angle : float = 0.0
 
-func reset_tween()->void:
-	if tween:
-		tween.kill()
-	tween = create_tween()
+func _ready() -> void:
+	Center_Offset.connect(_offset)
+
+func _offset(center:Vector2)->void:
+	tower = center
+
+func motion()->void:
+	angle += speed * get_physics_process_delta_time()
+	var x_pos = cos(angle)
+	var y_pos = sin(angle)
+	position.x = radius * x_pos + tower.x
+	position.y = radius * y_pos + tower.y
+
+func _physics_process(delta: float) -> void:
+	motion()
+	move_and_slide()

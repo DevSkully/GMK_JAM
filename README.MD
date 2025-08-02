@@ -26,14 +26,14 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 
 ### Art
 - [ ] Player
-    - Shooter 
+    - [] Shooter 
         - [x] default (twin pistols)
         - [ ] UZI
         - [ ] Shotgun
         - [ ] Rocket Launcher
-    - Car
+    - [x] Car
         - [x] running
-        - [x] destroyed
+        ~~- [x] destroyed~~ (prolly won't be used)
 - [ ] Enemies 
     - [x] Regular
         - [x] Walking

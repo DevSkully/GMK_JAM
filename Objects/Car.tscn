@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4nlnpos6fqwq"]
+[gd_scene load_steps=6 format=3 uid="uid://b4nlnpos6fqwq"]
 
 [ext_resource type="Texture2D" uid="uid://du2bbfdl00l8e" path="res://icon.svg" id="1_7km7h"]
 [ext_resource type="Script" uid="uid://c2dqfvfe6l5ay" path="res://Objects/Car_Script.gd" id="1_mlop7"]
 [ext_resource type="PackedScene" uid="uid://brqlvm1v265la" path="res://Objects/arrow.tscn" id="3_tena4"]
+[ext_resource type="Resource" uid="uid://bq1wt282h5uk3" path="res://Resource/Guns/Normal_Gun.tres" id="4_5x53x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5bju"]
 size = Vector2(128, 128)
@@ -17,3 +18,4 @@ texture = ExtResource("1_7km7h")
 shape = SubResource("RectangleShape2D_o5bju")
 
 [node name="Arrow" parent="." instance=ExtResource("3_tena4")]
+type = ExtResource("4_5x53x")

@@ -1,1 +1,7 @@
+res://Scenes/test_World/world.tscn
+res://Resource/Guns/Normal_Gun.tres
+res://Objects/arrow_script.gd
+res://Objects/Car.tscn
+res://Objects/arrow.tscn
 res://Objects/Bullet.tscn
+res://Objects/Central_Tower.tscn

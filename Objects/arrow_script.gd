@@ -32,6 +32,7 @@ func shoot(event:String)->void:
 		get_tree().root.add_child(bullet_objR)
 		(bullet_objR as Node2D).global_position = muzzleR.global_position
 		(bullet_objR as Node2D).rotation = (get_global_mouse_position() - muzzleR.global_position).normalized().angle()
+		bullet_objR.Damage.emit(type.damage)
 		
 		# instantiate left bullet 
 		var bullet_objL = bullet.instantiate()

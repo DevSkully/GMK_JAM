@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_b3ml3")
 name = "Normal Zombie"
-health = 100.0
+health = 40.0
 damage = 10.0
 attack_cooldown = 3.0
-speed = 20.0
+speed = 200.0
 metadata/_custom_type_script = "uid://bgaql57rjou5"

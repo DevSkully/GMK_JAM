@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4nlnpos6fqwq"]
+[gd_scene load_steps=12 format=3 uid="uid://b4nlnpos6fqwq"]
 
 [ext_resource type="Script" uid="uid://c2dqfvfe6l5ay" path="res://Objects/Car_Script.gd" id="1_mlop7"]
 [ext_resource type="Texture2D" uid="uid://banku8bviw03k" path="res://Assets/CarRun.png" id="3_a3eai"]
@@ -44,6 +44,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5bju"]
 size = Vector2(96, 160)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5x53x"]
+size = Vector2(98, 33.5)
+
 [node name="Car" type="CharacterBody2D"]
 script = ExtResource("1_mlop7")
 
@@ -62,3 +65,12 @@ shape = SubResource("RectangleShape2D_o5bju")
 [node name="Arrow" parent="." instance=ExtResource("3_tena4")]
 position = Vector2(31, 2)
 type = ExtResource("4_5x53x")
+
+[node name="Area2D" type="Area2D" parent="."]
+modulate = Color(0, 0, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -73)
+shape = SubResource("RectangleShape2D_5x53x")
+
+[connection signal="body_entered" from="Area2D" to="." method="hit_enemy"]

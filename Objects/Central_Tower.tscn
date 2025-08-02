@@ -1,10 +1,38 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfbn5214mh48b"]
+[gd_scene load_steps=16 format=3 uid="uid://dfbn5214mh48b"]
 
 [ext_resource type="Script" uid="uid://byv2og0oxymik" path="res://Scripts/CT_Script.gd" id="1_ihgvf"]
 [ext_resource type="Texture2D" uid="uid://cvrwgjsjhsvw8" path="res://Assets/Tower.png" id="2_0qie1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mpcu"]
-size = Vector2(127, 128)
+size = Vector2(193, 188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qie1"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(2619, 0, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbbqh"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(0, 946, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_englm"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(873, 946, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5ht6"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(1746, 946, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxxg5"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(2619, 946, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejkca"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(0, 1892, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7sca"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(873, 1892, 873, 946)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mpcu"]
 atlas = ExtResource("2_0qie1")
@@ -21,6 +49,32 @@ region = Rect2(1746, 0, 873, 946)
 [sub_resource type="SpriteFrames" id="SpriteFrames_nbbqh"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qie1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbbqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_englm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5ht6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxxg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejkca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7sca")
+}],
+"loop": false,
+"name": &"Destroyed",
+"speed": 7.0
+}, {
+"frames": [{
 "duration": 3.0,
 "texture": SubResource("AtlasTexture_5mpcu")
 }, {
@@ -36,7 +90,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qie1"]
-size = Vector2(203, 193)
+size = Vector2(311, 306)
 
 [node name="CentralTower" type="Node2D"]
 script = ExtResource("1_ihgvf")
@@ -44,7 +98,7 @@ script = ExtResource("1_ihgvf")
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(0.5, 0)
+position = Vector2(-1.5, 6)
 shape = SubResource("RectangleShape2D_5mpcu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -53,11 +107,13 @@ scale = Vector2(0.4, 0.4)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 position = Vector2(29, -31)
 sprite_frames = SubResource("SpriteFrames_nbbqh")
+animation = &"Destroyed"
 autoplay = "default"
-frame_progress = 0.657864
 
 [node name="Enemy Detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Detection"]
-position = Vector2(-2.5, 4.5)
+position = Vector2(0.5, 6)
 shape = SubResource("RectangleShape2D_0qie1")
+
+[connection signal="body_entered" from="Enemy Detection" to="." method="enemy_enetered"]

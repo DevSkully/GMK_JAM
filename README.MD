@@ -45,7 +45,7 @@ Art
         - [ ] Walking
         - [ ] Dead
 - [ ] Environment
-    - [ ] Tower
+    - [x] Tower
     - [ ] Background
 
 - [ ] Power-ups Icons

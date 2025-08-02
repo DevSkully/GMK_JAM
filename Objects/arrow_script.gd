@@ -4,7 +4,8 @@ extends Node2D
 @export var type : Weapon_Base_Resource
 
 @onready var bullet = preload("res://Objects/Bullet.tscn")
-@onready var muzzle:Marker2D = $Marker2D
+@onready var muzzleR:Marker2D = $Marker2DRight
+@onready var muzzleL:Marker2D = $Marker2DLeft
 
 var attack_cooldown : bool = true
 
@@ -16,18 +17,29 @@ func _process(delta: float) -> void:
 	else:
 		scale.y = 1
 	
-	print(attack_cooldown)
 	if attack_cooldown:
 		shoot("Fire")
 
 func shoot(event:String)->void:
 	if Input.is_action_just_pressed(event):
 		attack_cooldown = false
-		var bullet_obj = bullet.instantiate()
-		get_tree().root.add_child(bullet_obj)
-		(bullet_obj as Node2D).global_position = muzzle.global_position
-		(bullet_obj as Node2D).rotation = rotation
-		bullet_obj.Damage.emit(type.damage)
+		
+		# TO-DO: for shotgun and rocket launcher power-ups we should use one marker
+		# but for default pistols and UZI we'll use two markers -- 
+	
+		# instantiate right bullet 
+		var bullet_objR = bullet.instantiate()
+		get_tree().root.add_child(bullet_objR)
+		(bullet_objR as Node2D).global_position = muzzleR.global_position
+		(bullet_objR as Node2D).rotation = (get_global_mouse_position() - muzzleR.global_position).normalized().angle()
+		
+		# instantiate left bullet 
+		var bullet_objL = bullet.instantiate()
+		get_tree().root.add_child(bullet_objL)
+		(bullet_objL as Node2D).global_position = muzzleL.global_position
+		(bullet_objL as Node2D).rotation = (get_global_mouse_position() - muzzleR.global_position).normalized().angle()
+		bullet_objL.Damage.emit(type.damage)
+		
 		on_cooldown(type.attack_cooldown)
 
 func on_cooldown(seconds:float)->void:

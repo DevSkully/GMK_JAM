@@ -1,13 +1,42 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfbn5214mh48b"]
+[gd_scene load_steps=9 format=3 uid="uid://dfbn5214mh48b"]
 
 [ext_resource type="Script" uid="uid://byv2og0oxymik" path="res://Scripts/CT_Script.gd" id="1_ihgvf"]
-[ext_resource type="Texture2D" uid="uid://du2bbfdl00l8e" path="res://icon.svg" id="2_0qie1"]
+[ext_resource type="Texture2D" uid="uid://cvrwgjsjhsvw8" path="res://Assets/Tower.png" id="2_0qie1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mpcu"]
 size = Vector2(127, 128)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yle41"]
-radius = 85.0059
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mpcu"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(0, 0, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqewm"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(873, 0, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xhhh"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(1746, 0, 873, 946)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbbqh"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_5mpcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqewm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xhhh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qie1"]
+size = Vector2(203, 193)
 
 [node name="CentralTower" type="Node2D"]
 script = ExtResource("1_ihgvf")
@@ -19,9 +48,16 @@ position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_5mpcu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_0qie1")
+scale = Vector2(0.4, 0.4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(29, -31)
+sprite_frames = SubResource("SpriteFrames_nbbqh")
+autoplay = "default"
+frame_progress = 0.657864
 
 [node name="Enemy Detection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Detection"]
-shape = SubResource("CircleShape2D_yle41")
+position = Vector2(-2.5, 4.5)
+shape = SubResource("RectangleShape2D_0qie1")

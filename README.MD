@@ -6,9 +6,9 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 ## Progress
 
 Code
-- [ ] Player
-    - [ ] Loop Movement
-    - [ ] Aim + Shoot
+- [x] Player
+    - [x] Loop Movement
+    - [x] Aim + Shoot
 - [ ] Enemies
     - [ ] AI
     - [ ] SubTypes
@@ -44,9 +44,9 @@ Art
     - [ ] Tank
         - [ ] Walking
         - [ ] Dead
-- [ ] Environment
+- [x] Environment
     - [x] Tower
-    - [ ] Background
+    - [x] Background
 
 - [ ] Power-ups Icons
     - [ ] UZI

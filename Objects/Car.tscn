@@ -1,21 +1,65 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4nlnpos6fqwq"]
+[gd_scene load_steps=11 format=3 uid="uid://b4nlnpos6fqwq"]
 
-[ext_resource type="Texture2D" uid="uid://du2bbfdl00l8e" path="res://icon.svg" id="1_7km7h"]
 [ext_resource type="Script" uid="uid://c2dqfvfe6l5ay" path="res://Objects/Car_Script.gd" id="1_mlop7"]
+[ext_resource type="Texture2D" uid="uid://banku8bviw03k" path="res://Assets/CarRun.png" id="3_a3eai"]
 [ext_resource type="PackedScene" uid="uid://brqlvm1v265la" path="res://Objects/arrow.tscn" id="3_tena4"]
 [ext_resource type="Resource" uid="uid://bq1wt282h5uk3" path="res://Resource/Guns/Normal_Gun.tres" id="4_5x53x"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoqc7"]
+atlas = ExtResource("3_a3eai")
+region = Rect2(0, 0, 229, 399)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb41p"]
+atlas = ExtResource("3_a3eai")
+region = Rect2(229, 0, 229, 399)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdddm"]
+atlas = ExtResource("3_a3eai")
+region = Rect2(0, 399, 229, 399)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyjsn"]
+atlas = ExtResource("3_a3eai")
+region = Rect2(229, 399, 229, 399)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2f5fe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoqc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb41p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdddm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyjsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5bju"]
-size = Vector2(128, 128)
+size = Vector2(96, 160)
 
 [node name="Car" type="CharacterBody2D"]
+position = Vector2(0, 1)
 script = ExtResource("1_mlop7")
 
 [node name="Car_Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_7km7h")
+scale = Vector2(0.4, 0.4)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Car_Sprite"]
+sprite_frames = SubResource("SpriteFrames_2f5fe")
+autoplay = "default"
+frame_progress = 0.238919
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_o5bju")
 
 [node name="Arrow" parent="." instance=ExtResource("3_tena4")]
+position = Vector2(31, 2)
 type = ExtResource("4_5x53x")

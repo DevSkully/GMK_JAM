@@ -1,7 +1,1 @@
 res://Objects/Bullet.tscn
-res://Objects/Car.tscn
-res://Objects/arrow.tscn
-res://Objects/Central_Tower.tscn
-res://Scenes/test_World/world.tscn
-res://Objects/bullet_script.gd
-res://Objects/arrow_script.gd

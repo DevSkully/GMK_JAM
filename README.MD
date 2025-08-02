@@ -5,7 +5,7 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 
 ## Progress
 
-Code
+### Code
 - [x] Player
     - [x] Loop Movement
     - [x] Aim + Shoot
@@ -24,7 +24,7 @@ Code
 - [ ] Score
 - [ ] Lose condition (End Game when tower is destroyed and show score)
 
-Art
+### Art
 - [ ] Player
     - Shooter 
         - [x] default (twin pistols)
@@ -38,16 +38,19 @@ Art
     - [x] Regular
         - [x] Walking
         - [x] Dead
-    - [ ] Jockey
-        - [ ] Walking
-        - [ ] Dead
+    - [x] Jockey
+        - [x] Walking
+        - [x] Dead
     - [ ] Tank
         - [ ] Walking
         - [ ] Dead
 - [x] Environment
     - [x] Tower
     - [x] Background
+- [ ] Title Screen
+- [ ] End Screen
 
+#### Just use free assets for this :/
 - [ ] Power-ups Icons
     - [ ] UZI
     - [ ] Shotgun
@@ -57,5 +60,4 @@ Art
     - [ ] Projectiles
     - [ ] Explosions
     - [ ] Blood Splats
-- [ ] Title Screen
-- [ ] End Screen
+

@@ -45,7 +45,6 @@ animations = [{
 size = Vector2(96, 160)
 
 [node name="Car" type="CharacterBody2D"]
-position = Vector2(0, 1)
 script = ExtResource("1_mlop7")
 
 [node name="Car_Sprite" type="Sprite2D" parent="."]

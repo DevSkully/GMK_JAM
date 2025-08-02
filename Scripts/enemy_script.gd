@@ -1,5 +1,5 @@
 class_name Enemy
-extends Node2D
+extends CharacterBody2D
 
 @export var type : Enemy_Base_Resource
 

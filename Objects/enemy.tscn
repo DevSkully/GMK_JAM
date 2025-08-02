@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://crcvhelykd0p2"]
+
+[ext_resource type="Script" uid="uid://bt3g4i1k3s74x" path="res://Scripts/enemy_script.gd" id="1_dnm5c"]
+[ext_resource type="Texture2D" uid="uid://dsqxm40wywhp5" path="res://Assets/Zombie.png" id="2_d3xos"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfe2k"]
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_dnm5c")
+metadata/_custom_type_script = "uid://bt3g4i1k3s74x"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yfe2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d3xos")
+hframes = 4
+vframes = 3

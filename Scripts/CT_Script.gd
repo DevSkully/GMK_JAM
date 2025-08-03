@@ -18,7 +18,6 @@ func recieve_damage(damage:float)->void:
 		_tower_destroy()
 	else:
 		Health -= damage 
-	print(self.Health)
 
 func _process(delta: float) -> void:
 	var total_damage : float

@@ -47,8 +47,8 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 - [x] Environment
     - [x] Tower
     - [x] Background
-- [ ] Title Screen
-- [ ] End Screen
+- [x] Title Screen
+- [x] End Screen
 
 #### Just use free assets for this :/
 - [ ] Power-ups Icons

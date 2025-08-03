@@ -1,10 +1,31 @@
-[gd_scene load_steps=12 format=3 uid="uid://brqlvm1v265la"]
+[gd_scene load_steps=18 format=3 uid="uid://brqlvm1v265la"]
 
 [ext_resource type="Script" uid="uid://dmxewy5q06f8l" path="res://Objects/Gun/arrow_script.gd" id="1_5uyai"]
 [ext_resource type="Script" uid="uid://cua1seir2r7t" path="res://Resource/Base/Weapon_Base.gd" id="2_nyl1j"]
 [ext_resource type="Texture2D" uid="uid://c2s3cm2ust7hk" path="res://Assets/Gunner.png" id="2_xhjp5"]
 [ext_resource type="Resource" uid="uid://bq1wt282h5uk3" path="res://Resource/Guns/Normal_Gun.tres" id="3_bn7dx"]
 [ext_resource type="Resource" uid="uid://dnhfmct1wq5h3" path="res://Resource/Guns/UZI_Gun.tres" id="4_bn7dx"]
+[ext_resource type="Texture2D" uid="uid://c8fol0hl2uqt4" path="res://Assets/GunnerUZI.png" id="5_4acl2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2vni"]
+atlas = ExtResource("5_4acl2")
+region = Rect2(0, 0, 102, 188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00pjy"]
+atlas = ExtResource("5_4acl2")
+region = Rect2(102, 0, 102, 188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tc5ur"]
+atlas = ExtResource("5_4acl2")
+region = Rect2(204, 0, 102, 188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq5sc"]
+atlas = ExtResource("5_4acl2")
+region = Rect2(0, 188, 102, 188)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chrue"]
+atlas = ExtResource("5_4acl2")
+region = Rect2(102, 188, 102, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmal3"]
 atlas = ExtResource("2_xhjp5")
@@ -28,6 +49,26 @@ region = Rect2(102, 173, 102, 173)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_reu0k"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2vni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00pjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tc5ur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq5sc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chrue")
+}],
+"loop": true,
+"name": &"UZI",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vmal3")
@@ -62,6 +103,7 @@ scale = Vector2(0.34375, 0.350642)
 position = Vector2(-23.2727, 0)
 rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_reu0k")
+animation = &"UZI"
 autoplay = "default"
 
 [node name="Marker2DLeft" type="Marker2D" parent="."]
@@ -69,3 +111,5 @@ position = Vector2(44, -10)
 
 [node name="Marker2DRight" type="Marker2D" parent="."]
 position = Vector2(44, 11)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

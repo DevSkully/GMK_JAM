@@ -10,6 +10,9 @@ func set_count(score:int)->void:
 
 var upgrade_score : int = 50
 
+@onready var background_audio : AudioStream = preload("res://Assets/501253__buserror__zombie-process.mp3")
+
+
 func _ready() -> void:
 	Engine.max_fps = 60
 func _start()->void:
@@ -17,3 +20,10 @@ func _start()->void:
 	get_tree().change_scene_to_packed(world)
 func _loss()->void:
 	get_tree().change_scene_to_packed(loss)
+
+
+func audio_player(object:Variant)->void:
+	var audio : AudioStreamPlayer2D = AudioStreamPlayer2D.new()
+	object.add_child(audio)
+	audio.stream = background_audio
+	audio.play()

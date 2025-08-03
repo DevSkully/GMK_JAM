@@ -1,13 +1,165 @@
-[gd_scene load_steps=3 format=3 uid="uid://tdfrn3fgh1u2"]
+[gd_scene load_steps=25 format=3 uid="uid://tdfrn3fgh1u2"]
+
+[ext_resource type="Script" uid="uid://bt3g4i1k3s74x" path="res://Scripts/enemy_script.gd" id="1_uqeca"]
+[ext_resource type="Resource" uid="uid://n6dxorsw7cs7" path="res://Resource/Zombies/Tank.tres" id="2_p1eim"]
+[ext_resource type="Texture2D" uid="uid://2qkaa5ln602l" path="res://Assets/Tank.png" id="3_lppk4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tkitp"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2qbl"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(223, 402, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kgxe"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(446, 402, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhjje"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(669, 402, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkolv"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(892, 402, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnavh"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(0, 603, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqsmq"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(223, 603, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqgxw"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(446, 603, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbmxo"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(669, 603, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjboj"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(892, 603, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j7tq"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(0, 0, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ic3r"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(223, 0, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yplb4"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(446, 0, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8utln"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(669, 0, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iornq"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(892, 0, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iw0tk"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(0, 201, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3thth"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(223, 201, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp235"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(446, 201, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de8qk"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(669, 201, 223, 201)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opam3"]
+atlas = ExtResource("3_lppk4")
+region = Rect2(892, 201, 223, 201)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ppf0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2qbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kgxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhjje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkolv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnavh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqsmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqgxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbmxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjboj")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j7tq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ic3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yplb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8utln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iornq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iw0tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3thth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp235")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de8qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opam3")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
 
 [node name="TankZombie" type="CharacterBody2D"]
+script = ExtResource("1_uqeca")
+type = ExtResource("2_p1eim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tkitp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ppf0i")
+animation = &"Walking"
+autoplay = "Walking"

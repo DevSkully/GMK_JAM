@@ -1,16 +1,24 @@
 class_name World
 extends Node2D
 
-@export var enemy : Array[PackedScene]
 @export var enemy_spawn_timer : float = 2.50
 
 @onready var score : Label = $Label
+@onready var tower = $CentralTower
 @onready var SpawnTimer:Timer = Timer.new()
 
+@onready var normal_zombie = preload("res://Objects/enemies/enemy.tscn")
+@onready var jockey_zombie = preload("res://Objects/enemies/Jockey.tscn")
+@onready var tank_zombie = preload("res://Objects/enemies/Tank_Zombie.tscn")
+
+var enemy : Array[PackedScene]
+
 var margin = 200
-var cap = 10
+var difficult_cap = 10
 
 func _ready() -> void:
+	enemy = [normal_zombie, jockey_zombie, tank_zombie]
+	GameManager.audio_player(self)
 	timer()
 func timer()->void:
 	add_child(SpawnTimer)
@@ -34,22 +42,23 @@ func spawn_enemy()->void:
 	
 	var enemy_obj = type_enemy().instantiate()
 	self.add_child(enemy_obj)
-	(enemy_obj as CharacterBody2D).global_position = obj_position
-	enemy_obj.tower = get_node("CentralTower")
+	(enemy_obj as Node2D).global_position = obj_position
+	enemy_obj.tower = tower
 
 func type_enemy()->PackedScene:
-	if cap >= 20 and cap < 50:
-		enemy_spawn_timer += 0.50
+	if GameManager.count >= 20 and GameManager.count < 50:
+		enemy_spawn_timer += 0.25
 		return enemy[randi_range(0,1)]
-	#elif cap >= 50:
-		#return enemy[randi_range(0,2)]
+	elif GameManager.count >= 50:
+		enemy_spawn_timer += 1.0
+		return enemy[randi_range(0,2)]
 	else:
 		return enemy[0]
 
 func _process(delta: float) -> void:
 	score.text = "Score : " + str(GameManager.count)
 	
-	if GameManager.count >= cap and enemy_spawn_timer - 0.25 >= 0:
-		cap += 10
+	if GameManager.count >= difficult_cap and enemy_spawn_timer - 0.25 >= 0:
+		difficult_cap += 10
 		enemy_spawn_timer -= 0.25
 		SpawnTimer.start(enemy_spawn_timer)

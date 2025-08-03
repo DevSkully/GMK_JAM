@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://dkw3m7wcn741e"]
+[gd_scene load_steps=20 format=3 uid="uid://dkw3m7wcn741e"]
 
 [ext_resource type="Texture2D" uid="uid://cmk5afct1ecxl" path="res://Assets/Jockey.png" id="1_m7kv5"]
-[ext_resource type="Script" uid="uid://byv2og0oxymik" path="res://Scripts/CT_Script.gd" id="1_yt4hn"]
+[ext_resource type="Script" uid="uid://bt3g4i1k3s74x" path="res://Scripts/enemy_script.gd" id="1_yt4hn"]
+[ext_resource type="Resource" uid="uid://6mre8mas7g8j" path="res://Resource/Zombies/Jockey.tres" id="2_wwhtx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3rht"]
 atlas = ExtResource("1_m7kv5")
@@ -119,6 +120,7 @@ radius = 32.7567
 
 [node name="Jockey" type="CharacterBody2D"]
 script = ExtResource("1_yt4hn")
+type = ExtResource("2_wwhtx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w3rht")

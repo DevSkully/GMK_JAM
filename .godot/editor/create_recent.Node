@@ -1,3 +1,5 @@
+ProgressBar
+TextureProgressBar
 AudioStreamPlayer2D
 AnimatedSprite2D
 CollisionShape2D
@@ -11,4 +13,3 @@ VisibleOnScreenEnabler2D
 Sprite2D
 Marker2D
 arrow
-RigidBody2D

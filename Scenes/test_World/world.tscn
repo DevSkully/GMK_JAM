@@ -28,3 +28,9 @@ theme_override_font_sizes/font_size = 50
 text = "Score : 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 490.0
+offset_top = 1015.0
+offset_right = 1490.0
+offset_bottom = 1080.0

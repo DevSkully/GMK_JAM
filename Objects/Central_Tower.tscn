@@ -116,5 +116,5 @@ autoplay = "default"
 position = Vector2(0.5, 6)
 shape = SubResource("RectangleShape2D_0qie1")
 
-[connection signal="body_entered" from="Enemy Detection" to="." method="enemy_enetered"]
+[connection signal="body_entered" from="Enemy Detection" to="." method="enemy_entered"]
 [connection signal="body_exited" from="Enemy Detection" to="." method="enemy_exit"]

@@ -5,6 +5,8 @@ extends Node2D
 
 @onready var score : Label = $Label
 @onready var tower = $CentralTower
+@onready var progressBar = $ProgressBar
+
 @onready var SpawnTimer:Timer = Timer.new()
 
 @onready var normal_zombie = preload("res://Objects/enemies/enemy.tscn")
@@ -18,6 +20,7 @@ var difficult_cap = 10
 
 func _ready() -> void:
 	enemy = [normal_zombie, jockey_zombie, tank_zombie]
+	progressBar.max_value = tower.Health
 	GameManager.audio_player(self)
 	timer()
 func timer()->void:
@@ -57,6 +60,8 @@ func type_enemy()->PackedScene:
 
 func _process(delta: float) -> void:
 	score.text = "Score : " + str(GameManager.count)
+	
+	progressBar.value = tower.Health
 	
 	if GameManager.count >= difficult_cap and enemy_spawn_timer - 0.25 >= 0:
 		difficult_cap += 10

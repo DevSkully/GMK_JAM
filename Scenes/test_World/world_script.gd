@@ -31,7 +31,7 @@ func spawn_enemy()->void:
 	var obj_position : Vector2 = arr_spawn[randf_range(0,3)]
 	
 	var enemy_obj = enemy.instantiate()
-	get_tree().root.add_child(enemy_obj)
+	self.add_child(enemy_obj)
 	(enemy_obj as Node2D).global_position = obj_position
 	enemy_obj.tower = get_node("CentralTower")
 

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh15yf26p7hjw"]
+
+[ext_resource type="Script" uid="uid://cgsnai66r6hsl" path="res://Scenes/GUI/loss_screen_script.gd" id="1_stdgd"]
+
+[node name="GameLoss" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_stdgd")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 519.5
+offset_top = 403.5
+offset_right = 1400.5
+offset_bottom = 676.5
+theme_override_font_sizes/font_size = 200
+text = "You Lost!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 754.0
+offset_right = 1184.0
+offset_bottom = 899.0
+theme_override_font_sizes/font_size = 100
+text = "Continue"
+
+[connection signal="pressed" from="Button" to="." method="_resume"]

@@ -3,26 +3,30 @@
 **Loop of the Dead** is a top-down shooter where the player 
 faces against hordes of zombies while they are in a car looping constantly in a circle.
 
+## Assets Credits
+**{ credit assets you used here grave!! }**
+- Zap SFX - https://obsydianx.itch.io/horror-sfx-volume-1
+
 ## Progress
 
 ### Code
 - [x] Player
     - [x] Loop Movement
     - [x] Aim + Shoot
-- [ ] Enemies
-    - [ ] AI
-    - [ ] SubTypes
-       - [ ] Regular
-       - [ ] Jockey
-       - [ ] Tank
-- [ ] Tower 
-    - [ ] Health
-- [ ] Power-ups
-    - [ ] UZI (faster bullet rate)
-    - [ ] Shotgun (spread)
-    - [ ] Rocket Launcher (AOE)
-- [ ] Score
-- [ ] Lose condition (End Game when tower is destroyed and show score)
+- [x] Enemies
+    - [x] AI
+    - [x] SubTypes
+       - [x] Regular
+       - [x] Jockey
+       - [x] Tank
+- [x] Tower 
+    - [x] Health
+- [x] Power-ups
+    - [x] UZI (faster bullet rate)
+    - [ ] ~~Shotgun (spread)~~
+    - [ ] ~~Rocket Launcher (AOE)~~
+- [x] Score
+- [x] Lose condition (End Game when tower is destroyed and show score)
 
 ### Art
 - [ ] Player
@@ -51,13 +55,13 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 - [x] End Screen
 
 #### Just use free assets for this :/
-- [ ] Power-ups Icons
-    - [ ] UZI
-    - [ ] Shotgun
-    - [ ] Rocket Launcher
-- [ ] Effects
-    - [ ] Gun flares
-    - [ ] Projectiles
-    - [ ] Explosions
-    - [ ] Blood Splats
+- [ ] ~~Power-ups Icons~~
+    - [ ] ~~UZI~~
+    - [ ] ~~Shotgun~~
+    - [ ] ~~Rocket~~ Launcher
+- [ ] ~~Effects~~
+    - [ ] ~~Gun flares~~
+    - [ ] ~~Projectiles~~
+    - [ ] ~~Explosions~~
+    - [ ] ~~Blood Splats~~
 

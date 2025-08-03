@@ -6,6 +6,7 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 ## Assets Credits
 **{ credit assets you used here grave!! }**
 - Zap SFX - https://obsydianx.itch.io/horror-sfx-volume-1
+- BGMs - https://therealswirls.itch.io/psx-horror-music
 
 ## Progress
 

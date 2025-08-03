@@ -10,7 +10,8 @@ func set_count(score:int)->void:
 
 var upgrade_score : int = 50
 
-@onready var background_audio : AudioStream = preload("res://Assets/501253__buserror__zombie-process.mp3")
+@onready var background_audio : AudioStream = preload("res://Assets/ItsAScreamBaby.mp3")
+@onready var game_over_audio : AudioStream = preload("res://Assets/Jumpscare.mp3")
 
 
 func _ready() -> void:
@@ -28,4 +29,10 @@ func audio_player(object:Variant)->void:
 	var audio : AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 	object.add_child(audio)
 	audio.stream = background_audio
+	audio.play()
+
+func game_over(object:Variant)->void:
+	var audio : AudioStreamPlayer2D = AudioStreamPlayer2D.new()
+	object.add_child(audio)
+	audio.stream = game_over_audio
 	audio.play()

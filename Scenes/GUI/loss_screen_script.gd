@@ -4,6 +4,7 @@ extends Control
 
 func _ready() -> void:
 	label.text = "Final Score : " + str(GameManager.count)
+	GameManager.game_over(self)
 
 func _resume()->void:
 	get_tree().paused = false

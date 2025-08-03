@@ -1,3 +1,4 @@
+Label
 TextureRect
 TextEdit
 Button
@@ -5,7 +6,6 @@ ProgressBar
 TextureProgressBar
 AudioStreamPlayer2D
 AnimatedSprite2D
-Label
 Enemy
 CharacterBody2D
 Control

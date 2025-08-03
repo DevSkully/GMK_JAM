@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh15yf26p7hjw"]
 
 [ext_resource type="Script" uid="uid://cgsnai66r6hsl" path="res://Scenes/GUI/loss_screen_script.gd" id="1_stdgd"]
-[ext_resource type="Texture2D" uid="uid://db7vs6cacy2aa" path="res://Assets/gameOver.png" id="2_oinl5"]
-[ext_resource type="FontFile" uid="uid://bmhj3losg68ya" path="res://Assets/Creepster/Creepster-Regular.ttf" id="3_lu3uo"]
+[ext_resource type="Texture2D" uid="uid://b8s2pguq2n8yb" path="res://Assets/gameOver.png" id="2_oinl5"]
+[ext_resource type="FontFile" uid="uid://d1gleg58oysxm" path="res://Assets/Creepster/Creepster-Regular.ttf" id="3_lu3uo"]
 
 [node name="GameLoss" type="Control"]
 layout_mode = 3
@@ -17,12 +17,22 @@ texture = ExtResource("2_oinl5")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 820.0
-offset_top = 946.0
-offset_right = 1158.0
-offset_bottom = 1057.0
+offset_left = 821.0
+offset_top = 950.0
+offset_right = 1159.0
+offset_bottom = 1061.0
 theme_override_fonts/font = ExtResource("3_lu3uo")
 theme_override_font_sizes/font_size = 75
-text = "Retry?"
+text = "Continue"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 642.5
+offset_top = 466.5
+offset_right = 1337.5
+offset_bottom = 613.5
+theme_override_fonts/font = ExtResource("3_lu3uo")
+theme_override_font_sizes/font_size = 125
+text = "Final Score : 0"
 
 [connection signal="pressed" from="Button" to="." method="_resume"]

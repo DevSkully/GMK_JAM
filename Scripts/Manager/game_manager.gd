@@ -20,7 +20,6 @@ func _start()->void:
 	count = 0
 func _loss()->void:
 	get_tree().change_scene_to_packed(loss)
-	count = 0
 
 func increase_count(value:int)->void:
 	count += value

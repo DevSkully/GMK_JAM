@@ -3,10 +3,8 @@
 **Loop of the Dead** is a top-down shooter where the player 
 faces against hordes of zombies while they are in a car looping constantly in a circle.
 
-## Assets Credits
-**{ credit assets you used here grave!! }**
-- Zap SFX - https://obsydianx.itch.io/horror-sfx-volume-1
-- BGMs - https://therealswirls.itch.io/psx-horror-music
+
+Successfully submitted [here](https://retrovii.itch.io/loop-of-the-dead)
 
 ## Progress
 
@@ -31,7 +29,7 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 
 ### Art
 - [ ] Player
-    - [] Shooter 
+    - [ ] Shooter 
         - [x] default (twin pistols)
         - [x] UZI
         - [ ] ~~Shotgun~~ no time

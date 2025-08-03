@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dfbn5214mh48b"]
+[gd_scene load_steps=19 format=3 uid="uid://dfbn5214mh48b"]
 
 [ext_resource type="Script" uid="uid://byv2og0oxymik" path="res://Scripts/CT_Script.gd" id="1_ihgvf"]
 [ext_resource type="Texture2D" uid="uid://cvrwgjsjhsvw8" path="res://Assets/Tower.png" id="2_0qie1"]
@@ -33,6 +33,18 @@ region = Rect2(0, 1892, 873, 946)
 [sub_resource type="AtlasTexture" id="AtlasTexture_b7sca"]
 atlas = ExtResource("2_0qie1")
 region = Rect2(873, 1892, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d2gy"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(2619, 0, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6b33"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(0, 946, 873, 946)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyrto"]
+atlas = ExtResource("2_0qie1")
+region = Rect2(873, 946, 873, 946)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mpcu"]
 atlas = ExtResource("2_0qie1")
@@ -75,6 +87,20 @@ animations = [{
 "speed": 7.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d2gy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6b33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyrto")
+}],
+"loop": false,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 3.0,
 "texture": SubResource("AtlasTexture_5mpcu")
 }, {
@@ -107,8 +133,10 @@ scale = Vector2(0.4, 0.4)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
 position = Vector2(29, -31)
 sprite_frames = SubResource("SpriteFrames_nbbqh")
-animation = &"Destroyed"
+animation = &"damaged"
 autoplay = "default"
+frame = 2
+frame_progress = 1.0
 
 [node name="Enemy Detection" type="Area2D" parent="."]
 

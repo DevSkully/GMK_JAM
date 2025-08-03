@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://8typxcnlgjmb"]
 
 [ext_resource type="Script" uid="uid://jc3o40vgk8s7" path="res://Objects/bullet_script.gd" id="1_ubr88"]
-[ext_resource type="Texture2D" uid="uid://du2bbfdl00l8e" path="res://icon.svg" id="2_ljs67"]
+[ext_resource type="Texture2D" uid="uid://08wynyhsh21o" path="res://Assets/bullet.png" id="2_ljs67"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ljs67"]
 radius = 8.0
@@ -10,7 +10,7 @@ radius = 8.0
 script = ExtResource("1_ubr88")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ljs67")
 
 [node name="Area2D" type="Area2D" parent="."]

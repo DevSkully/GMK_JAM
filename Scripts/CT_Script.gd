@@ -18,6 +18,9 @@ func recieve_damage(damage:float)->void:
 		_tower_destroy()
 	else:
 		Health -= damage 
+		sprite.play("damaged")
+		await sprite.animation_finished
+		sprite.play("default")
 
 func _process(delta: float) -> void:
 	var total_damage : float

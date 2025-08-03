@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b402ds03go6us"]
 
-[ext_resource type="Script" uid="uid://bfa4gibtiquju" path="res://Scenes/GUI/main_menu_script.gd" id="1_c428o"]
-[ext_resource type="Texture2D" uid="uid://cb0uqeamctwt1" path="res://Assets/titleScreen.png" id="1_sar4h"]
-[ext_resource type="FontFile" uid="uid://d1gleg58oysxm" path="res://Assets/Creepster/Creepster-Regular.ttf" id="2_c428o"]
+[ext_resource type="Script" path="res://Scenes/GUI/main_menu_script.gd" id="1_c428o"]
+[ext_resource type="Texture2D" uid="uid://og4uc7iv5qhl" path="res://Assets/titleScreen.png" id="1_sar4h"]
+[ext_resource type="FontFile" uid="uid://bmhj3losg68ya" path="res://Assets/Creepster/Creepster-Regular.ttf" id="2_c428o"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -21,10 +21,10 @@ texture = ExtResource("1_sar4h")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 750.0
-offset_top = 700.0
-offset_right = 1239.0
-offset_bottom = 855.0
+offset_left = 90.0
+offset_top = 785.0
+offset_right = 579.0
+offset_bottom = 940.0
 theme_override_fonts/font = ExtResource("2_c428o")
 theme_override_font_sizes/font_size = 125
 text = "Play Game"

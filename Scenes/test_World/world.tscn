@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://h2uw5w43223m" path="res://Scenes/test_World/world_script.gd" id="1_5s6mh"]
 [ext_resource type="PackedScene" uid="uid://b4nlnpos6fqwq" path="res://Objects/Car.tscn" id="1_au5re"]
 [ext_resource type="PackedScene" uid="uid://dfbn5214mh48b" path="res://Objects/Central_Tower.tscn" id="3_hr62t"]
-[ext_resource type="Texture2D" uid="uid://0trrjgkyd5n0" path="res://Assets/background.png" id="4_nu1vi"]
+[ext_resource type="Texture2D" uid="uid://bsfyfdoo3tuq0" path="res://Assets/background.png" id="4_nu1vi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu1vi"]
 size = Vector2(238, 389)

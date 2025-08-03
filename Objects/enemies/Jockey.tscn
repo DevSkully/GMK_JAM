@@ -112,7 +112,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 7.0
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt4hn"]
@@ -125,8 +125,8 @@ type = ExtResource("2_wwhtx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_w3rht")
-animation = &"Death"
 autoplay = "default"
+frame_progress = 0.506936
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yt4hn")

@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bt3g4i1k3s74x" path="res://Scripts/enemy_script.gd" id="1_uqeca"]
 [ext_resource type="Resource" uid="uid://n6dxorsw7cs7" path="res://Resource/Zombies/Tank.tres" id="2_p1eim"]
-[ext_resource type="Texture2D" uid="uid://2qkaa5ln602l" path="res://Assets/Tank.png" id="3_lppk4"]
+[ext_resource type="Texture2D" uid="uid://durb0v6kkwiqt" path="res://Assets/Tank.png" id="3_lppk4"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tkitp"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqeca"]
+radius = 26.0768
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2qbl"]
 atlas = ExtResource("3_lppk4")
@@ -157,9 +158,12 @@ script = ExtResource("1_uqeca")
 type = ExtResource("2_p1eim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_tkitp")
+position = Vector2(1.90735e-07, -7)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_uqeca")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_ppf0i")
 animation = &"Walking"
 autoplay = "Walking"

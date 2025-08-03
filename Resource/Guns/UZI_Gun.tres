@@ -6,6 +6,6 @@
 script = ExtResource("1_aonoe")
 name = "UZI"
 damage = 20.0
-bullet_speed = 100.0
+bullet_speed = 75.0
 attack_cooldown = 0.0
 metadata/_custom_type_script = "uid://cua1seir2r7t"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dkw3m7wcn741e"]
 
-[ext_resource type="Texture2D" uid="uid://cmk5afct1ecxl" path="res://Assets/Jockey.png" id="1_m7kv5"]
+[ext_resource type="Texture2D" uid="uid://b5fkkpcx332if" path="res://Assets/Jockey.png" id="1_m7kv5"]
 [ext_resource type="Script" uid="uid://bt3g4i1k3s74x" path="res://Scripts/enemy_script.gd" id="1_yt4hn"]
 [ext_resource type="Resource" uid="uid://6mre8mas7g8j" path="res://Resource/Zombies/Jockey.tres" id="2_wwhtx"]
 
@@ -116,13 +116,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yt4hn"]
-radius = 32.7567
+radius = 23.0217
 
 [node name="Jockey" type="CharacterBody2D"]
 script = ExtResource("1_yt4hn")
 type = ExtResource("2_wwhtx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_w3rht")
 animation = &"Death"
 autoplay = "default"

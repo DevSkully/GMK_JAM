@@ -49,17 +49,17 @@ func spawn_enemy()->void:
 	enemy_obj.tower = tower
 
 func type_enemy()->PackedScene:
-	if GameManager.count == 20:
-		enemy_spawn_timer += 0.25
+	if GameManager.count >= 20 and GameManager.count < 50:
+		enemy_spawn_timer -= 0.25
 		return enemy[randi_range(0,1)]
-	elif GameManager.count == 50:
-		enemy_spawn_timer += 1.00
+	elif GameManager.count >= 50:
+		enemy_spawn_timer -= .50
 		return enemy[randi_range(0,2)]
 	else:
 		return enemy[0]
 
 func _process(delta: float) -> void:
-	score.text = "Score : " + str(GameManager.count)
+	score.text = "Kill Count : " + str(GameManager.count)
 	
 	progressBar.value = tower.Health
 	

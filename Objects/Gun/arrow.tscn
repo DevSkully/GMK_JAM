@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c2s3cm2ust7hk" path="res://Assets/Gunner.png" id="2_xhjp5"]
 [ext_resource type="Resource" uid="uid://bq1wt282h5uk3" path="res://Resource/Guns/Normal_Gun.tres" id="3_bn7dx"]
 [ext_resource type="Resource" uid="uid://dnhfmct1wq5h3" path="res://Resource/Guns/UZI_Gun.tres" id="4_bn7dx"]
-[ext_resource type="Texture2D" uid="uid://c8fol0hl2uqt4" path="res://Assets/GunnerUZI.png" id="5_4acl2"]
+[ext_resource type="Texture2D" uid="uid://bp1rfv23upck5" path="res://Assets/GunnerUZI.png" id="5_4acl2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2vni"]
 atlas = ExtResource("5_4acl2")

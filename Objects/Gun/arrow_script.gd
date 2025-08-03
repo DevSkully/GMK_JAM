@@ -32,6 +32,15 @@ func _process(delta: float) -> void:
 	
 	if attack_cooldown:
 		shoot("Fire")
+	
+	if GameManager.count == upgrade_score:
+		upgrade_score += upgrade_score + 25
+		count+=1
+		if count < type.size():
+			anim_sprite.play("UZI")
+			audio.stream = Uzi_sound
+			current_weapon = type[count]
+
 
 func shoot(event:String)->void:
 	if Input.is_action_just_pressed(event):
@@ -57,14 +66,6 @@ func shoot(event:String)->void:
 		audio.play()
 		
 		on_cooldown(current_weapon.attack_cooldown)
-	
-	if GameManager.count == upgrade_score:
-		upgrade_score += upgrade_score + 25
-		count+=1
-		if count < type.size():
-			anim_sprite.play("UZI")
-			audio.stream = Uzi_sound
-			current_weapon = type[count]
 
 func on_cooldown(seconds:float)->void:
 	await get_tree().create_timer(seconds).timeout

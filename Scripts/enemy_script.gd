@@ -15,7 +15,7 @@ func _ready() -> void:
 	sprite.play("Walking")
 func on_death()->void:
 	set_physics_process(false)
-	GameManager.set_count(1)
+	GameManager.increase_count(1)
 	sprite.play("Death")
 	zombie_on_death_sound()
 	is_allive = false

@@ -6,14 +6,16 @@ extends CharacterBody2D
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var _health = type.health
 
-var tower
+var tower : Node2D
+var is_allive:bool = true
 
 func _ready() -> void:
 	sprite.play("Walking")
 func on_death()->void:
 	set_physics_process(false)
-	
+	GameManager.set_count(1)
 	sprite.play("Death")
+	is_allive = false
 	await sprite.animation_finished
 	queue_free()
 func recieve_damage(damage)->void:

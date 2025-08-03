@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Weapon_Base_Resource" load_steps=2 format=3 uid="uid://dnhfmct1wq5h3"]
+
+[ext_resource type="Script" uid="uid://cua1seir2r7t" path="res://Resource/Base/Weapon_Base.gd" id="1_aonoe"]
+
+[resource]
+script = ExtResource("1_aonoe")
+name = "UZI"
+damage = 20.0
+bullet_speed = 100.0
+attack_cooldown = 0.0
+metadata/_custom_type_script = "uid://cua1seir2r7t"

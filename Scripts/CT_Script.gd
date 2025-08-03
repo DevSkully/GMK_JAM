@@ -11,7 +11,7 @@ var can_damage:bool = true
 func _tower_destroy()->void:
 	sprite.play("Destroyed")
 	await sprite.animation_finished
-	get_tree().change_scene_to_packed(GameManager.loss)
+	GameManager._loss()
 
 func recieve_damage(damage:float)->void:
 	if Health - damage <= 0 :

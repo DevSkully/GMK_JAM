@@ -1,2 +1,2 @@
-﻿38081
+﻿37299
 /usr/lib/godot-mono/godot.linuxbsd.editor.x86_64.mono

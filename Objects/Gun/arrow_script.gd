@@ -1,13 +1,20 @@
 class_name arrow
 extends Node2D
 
-@export var type : Weapon_Base_Resource
+@export var type : Array[Weapon_Base_Resource]
 
 @onready var bullet = preload("res://Objects/Bullet.tscn")
 @onready var muzzleR:Marker2D = $Marker2DRight
 @onready var muzzleL:Marker2D = $Marker2DLeft
 
 var attack_cooldown : bool = true
+var current_weapon : Weapon_Base_Resource
+
+var upgrade_score = 50
+var count = 0
+
+func _ready() -> void:
+	current_weapon = type[count]
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -32,16 +39,22 @@ func shoot(event:String)->void:
 		get_tree().root.add_child(bullet_objR)
 		(bullet_objR as Node2D).global_position = muzzleR.global_position
 		(bullet_objR as Node2D).rotation = (get_global_mouse_position() - muzzleR.global_position).normalized().angle()
-		bullet_objR.Damage.emit(type.damage)
+		bullet_objR.Damage.emit(current_weapon.damage)
 		
 		# instantiate left bullet 
 		var bullet_objL = bullet.instantiate()
 		get_tree().root.add_child(bullet_objL)
 		(bullet_objL as Node2D).global_position = muzzleL.global_position
 		(bullet_objL as Node2D).rotation = (get_global_mouse_position() - muzzleR.global_position).normalized().angle()
-		bullet_objL.Damage.emit(type.damage)
+		bullet_objL.Damage.emit(current_weapon.damage)
 		
-		on_cooldown(type.attack_cooldown)
+		on_cooldown(current_weapon.attack_cooldown)
+	
+	if GameManager.count == upgrade_score:
+		upgrade_score += upgrade_score + 25
+		count+=1
+		if count < type.size():
+			current_weapon = type[count]
 
 func on_cooldown(seconds:float)->void:
 	await get_tree().create_timer(seconds).timeout

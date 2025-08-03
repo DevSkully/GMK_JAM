@@ -18,6 +18,6 @@ func _on_exit()->void:
 	self.queue_free()
 
 func _damage_enemy(obj:Node2D)->void:
-	if obj is Enemy:
+	if obj is Enemy and (obj as Enemy).is_allive:
 		obj.recieve_damage(damage)
 		self.queue_free()

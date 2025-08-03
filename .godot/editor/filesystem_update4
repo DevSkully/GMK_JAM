@@ -1,9 +1,0 @@
-res://Scenes/test_World/world.tscn
-res://Resource/Guns/Normal_Gun.tres
-res://Scripts/Manager/game_manager.gd
-res://Scenes/GUI/Game_Loss.tscn
-res://Scenes/GUI/loss_screen_script.gd
-res://Scenes/GUI/main_menu.tscn
-res://Objects/Central_Tower.tscn
-res://Scripts/CT_Script.gd
-res://Scenes/test_World/world_script.gd

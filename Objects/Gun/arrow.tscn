@@ -1,26 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://brqlvm1v265la"]
+[gd_scene load_steps=12 format=3 uid="uid://brqlvm1v265la"]
 
-[ext_resource type="Script" uid="uid://dmxewy5q06f8l" path="res://Objects/arrow_script.gd" id="1_l0n1x"]
-[ext_resource type="Texture2D" uid="uid://c2s3cm2ust7hk" path="res://Assets/Gunner.png" id="2_l0n1x"]
+[ext_resource type="Script" uid="uid://dmxewy5q06f8l" path="res://Objects/Gun/arrow_script.gd" id="1_5uyai"]
+[ext_resource type="Script" uid="uid://cua1seir2r7t" path="res://Resource/Base/Weapon_Base.gd" id="2_nyl1j"]
+[ext_resource type="Texture2D" uid="uid://c2s3cm2ust7hk" path="res://Assets/Gunner.png" id="2_xhjp5"]
+[ext_resource type="Resource" uid="uid://bq1wt282h5uk3" path="res://Resource/Guns/Normal_Gun.tres" id="3_bn7dx"]
+[ext_resource type="Resource" uid="uid://dnhfmct1wq5h3" path="res://Resource/Guns/UZI_Gun.tres" id="4_bn7dx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmal3"]
-atlas = ExtResource("2_l0n1x")
+atlas = ExtResource("2_xhjp5")
 region = Rect2(0, 0, 102, 173)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6783"]
-atlas = ExtResource("2_l0n1x")
+atlas = ExtResource("2_xhjp5")
 region = Rect2(102, 0, 102, 173)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xu0xr"]
-atlas = ExtResource("2_l0n1x")
+atlas = ExtResource("2_xhjp5")
 region = Rect2(204, 0, 102, 173)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qqkk"]
-atlas = ExtResource("2_l0n1x")
+atlas = ExtResource("2_xhjp5")
 region = Rect2(0, 173, 102, 173)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bsyvs"]
-atlas = ExtResource("2_l0n1x")
+atlas = ExtResource("2_xhjp5")
 region = Rect2(102, 173, 102, 173)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_reu0k"]
@@ -47,7 +50,8 @@ animations = [{
 }]
 
 [node name="Arrow" type="Node2D"]
-script = ExtResource("1_l0n1x")
+script = ExtResource("1_5uyai")
+type = Array[ExtResource("2_nyl1j")]([ExtResource("3_bn7dx"), ExtResource("4_bn7dx")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(23, -7.27596e-12)

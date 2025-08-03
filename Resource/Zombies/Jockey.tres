@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Enemy_Base_Resource" load_steps=2 format=3 uid="uid://6mre8mas7g8j"]
+
+[ext_resource type="Script" uid="uid://bgaql57rjou5" path="res://Resource/Base/Enemy_Base.gd" id="1_r82mq"]
+
+[resource]
+script = ExtResource("1_r82mq")
+name = "Jockey"
+health = 20.0
+damage = 5.0
+attack_cooldown = 0.5
+speed = 600.0
+metadata/_custom_type_script = "uid://bgaql57rjou5"

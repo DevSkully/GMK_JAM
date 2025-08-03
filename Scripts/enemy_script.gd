@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var _health = type.health
-
+@onready var collision = get_node("CollisionShape2D")
 @onready var death_audio = preload("res://Assets/316257__littlerobotsoundfactory__zombie_31.wav")
 
 var tower : Node2D
@@ -15,6 +15,7 @@ func _ready() -> void:
 	sprite.play("Walking")
 func on_death()->void:
 	set_physics_process(false)
+	(collision as CollisionShape2D).disabled = true
 	GameManager.increase_count(1)
 	sprite.play("Death")
 	zombie_on_death_sound()

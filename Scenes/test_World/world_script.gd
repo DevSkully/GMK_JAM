@@ -46,11 +46,11 @@ func spawn_enemy()->void:
 	enemy_obj.tower = tower
 
 func type_enemy()->PackedScene:
-	if GameManager.count >= 20 and GameManager.count < 50:
+	if GameManager.count == 20:
 		enemy_spawn_timer += 0.25
 		return enemy[randi_range(0,1)]
-	elif GameManager.count >= 50:
-		enemy_spawn_timer += 1.0
+	elif GameManager.count == 50:
+		enemy_spawn_timer += 1.00
 		return enemy[randi_range(0,2)]
 	else:
 		return enemy[0]

@@ -25,5 +25,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func hit_enemy(obj:Node2D)->void:
-	if obj is Enemy:
+	if obj is Enemy and (obj as Enemy).is_alive:
 		obj.on_death()

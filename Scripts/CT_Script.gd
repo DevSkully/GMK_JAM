@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(2).timeout
 		can_damage = true
 
-func enemy_enetered(node:Node2D):
+func enemy_entered(node:Node2D):
 	if node is Enemy:
 		enemies.append(node)
 

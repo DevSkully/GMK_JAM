@@ -28,22 +28,22 @@ faces against hordes of zombies while they are in a car looping constantly in a 
 - [ ] Player
     - [] Shooter 
         - [x] default (twin pistols)
-        - [ ] UZI
-        - [ ] Shotgun
-        - [ ] Rocket Launcher
+        - [x] UZI
+        - [ ] ~~Shotgun~~ no time
+        - [ ] ~~Rocket Launcher~~ no time
     - [x] Car
         - [x] running
-        ~~- [x] destroyed~~ (prolly won't be used)
-- [ ] Enemies 
+         [x] ~~-destroyed~~ (prolly won't be used)
+- [x] Enemies 
     - [x] Regular
         - [x] Walking
         - [x] Dead
     - [x] Jockey
         - [x] Walking
         - [x] Dead
-    - [ ] Tank
-        - [ ] Walking
-        - [ ] Dead
+    - [x] Tank
+        - [x] Walking
+        - [x] Dead
 - [x] Environment
     - [x] Tower
     - [x] Background
